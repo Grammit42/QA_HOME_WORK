@@ -22,6 +22,8 @@ package org.example;
 */
 
 
+import java.text.DecimalFormat;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -51,15 +53,19 @@ class Shop {//Создание класса Shop с товарами
         /*Для того, чтобы итоговая сумма была округлена до двух знаков после запятой,
         создадим дополнительную переменную totalAmount*/
         float totalAmount = numberOfProducts * praceOfTheProduct - (numberOfProducts *praceOfTheProduct* discount);
-        String result1 = String.format("%.2f",totalAmount);
+        //System.out.println(new DecimalFormat("##.##").format(totalAmount) );// другой способ округлить десятичные числа до двух знаков после запятой.
 
+        String finalResult = String.format("%.2f",totalAmount);
+        //Добавил две переменные и вывел в них вычисления, чтобы выглядело лаконичнее
+        float amountWithoutDiscount = numberOfProducts * praceOfTheProduct;//Общая сумма покупки без скидки
+        float sumOfDiscount = (numberOfProducts * praceOfTheProduct)* discount;//Размер скидки для ясности
 
         System.out.print("Общая сумма покупки без скидки: ");
-        System.out.println(numberOfProducts * praceOfTheProduct);
+        System.out.println(amountWithoutDiscount);//Общая сумма покупки без скидки
         System.out.print("Cкидка на все товары: ");
-        System.out.println((numberOfProducts * praceOfTheProduct)* discount);//Отдельно вывожу размер скидки для ясности
+        System.out.println(sumOfDiscount);//Отдельно вывожу размер скидки для ясности
         System.out.print("Общая сумма покупки со скидкой: ");
-        System.out.println(result1 + "\n" + "___________________");//Подсчёт суммы твоваров со скидкой и округлённым значение до двух знаков после запятой
+        System.out.println(finalResult + "\n" + "___________________");//Подсчёт суммы твоваров со скидкой и округлённым значение до двух знаков после запятой
 
     }
 }
