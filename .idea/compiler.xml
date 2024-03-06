@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mts_ru_qa" />
+        <module name="mts_ru_qa_work_2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="2" target="13" />
+      <module name="2.main" target="13" />
+      <module name="2.test" target="13" />
+      <module name="mts.ru.qa" target="11" />
+      <module name="Sprint2" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
