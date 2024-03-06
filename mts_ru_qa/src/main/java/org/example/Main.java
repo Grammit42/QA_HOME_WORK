@@ -27,9 +27,9 @@ import java.text.DecimalFormat;
 public class Main {
     public static void main(String[] args) {
 
-        Shop shop1 = new Shop(10,250,0.0075F);//Создание трёх экземпляров классов,
-        Shop shop2 = new Shop(20,130,0.42575F);//передаём заданные по ТЗ проценты, а так же вписываем количество товаров и их цену.
-        Shop shop3 = new Shop(35,35,0.591F);
+        Shop shop1 = new Shop(10, 250, 0.0075F);//Создание трёх экземпляров классов,
+        Shop shop2 = new Shop(20, 130, 0.42575F);//передаём заданные по ТЗ проценты, а так же вписываем количество товаров и их цену.
+        Shop shop3 = new Shop(35, 35, 0.591F);
 
         shop1.shopCalculate(shop1);//вызываем для каждого объекта метод, выводящий необходимую информацию, передаём в него этот же объект
         shop2.shopCalculate(shop2);
@@ -52,13 +52,13 @@ class Shop {//Создание класса Shop с товарами
     public void shopCalculate(Shop shop) {//метод, который принимает объект на вход и выполняет подсчеты: вывести на экран общую сумму покупки без скидки и сумму со скидкой.
         /*Для того, чтобы итоговая сумма была округлена до двух знаков после запятой,
         создадим дополнительную переменную totalAmount*/
-        float totalAmount = numberOfProducts * praceOfTheProduct - (numberOfProducts *praceOfTheProduct* discount);
+        float totalAmount = numberOfProducts * praceOfTheProduct - (numberOfProducts * praceOfTheProduct * discount);
         //System.out.println(new DecimalFormat("##.##").format(totalAmount) );// другой способ округлить десятичные числа до двух знаков после запятой.
 
-        String finalResult = String.format("%.2f",totalAmount);
+        String finalResult = String.format("%.2f", totalAmount);
         //Добавил две переменные и вывел в них вычисления, чтобы выглядело лаконичнее
         float amountWithoutDiscount = numberOfProducts * praceOfTheProduct;//Общая сумма покупки без скидки
-        float sumOfDiscount = (numberOfProducts * praceOfTheProduct)* discount;//Размер скидки для ясности
+        float sumOfDiscount = (numberOfProducts * praceOfTheProduct) * discount;//Размер скидки для ясности
 
         System.out.print("Общая сумма покупки без скидки: ");
         System.out.println(amountWithoutDiscount);//Общая сумма покупки без скидки
